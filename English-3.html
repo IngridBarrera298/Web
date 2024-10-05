@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoValle - Iniciativas Ecológicas en Valledupar</title>
+    <style>
+        /* General Styles */
+        body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #e0f7fa, #a7ffeb, #81c784);
+    color: #2e7d32;
+    background-size: 400% 400%;
+    animation: backgroundShift 10s ease infinite;
+}
+
+@keyframes backgroundShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #4caf50, #388e3c, #1b5e20);
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-bottom: 8px solid #388e3c;
+    position: relative;
+    overflow: hidden;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.2), transparent 70%);
+    transform: translateX(-50%);
+    animation: pulseRadial 6s infinite;
+}
+
+@keyframes pulseRadial {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.6; }
+}
+
+header h1 {
+    font-size: 3.5em;
+    margin: 0;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #fff;
+    background: linear-gradient(90deg, #fff, #a5d6a7, #66bb6a);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: textGlow 4s infinite alternate;
+}
+
+@keyframes textGlow {
+    0% { text-shadow: 0 0 20px #00E676, 0 0 40px #00C853, 0 0 60px #00C853; }
+    100% { text-shadow: 0 0 40px #76FF03, 0 0 60px #64DD17, 0 0 80px #00E676; }
+}
+
+header p {
+    font-size: 1.5em;
+    margin-top: 15px;
+    color: #e8f5e9;
+    letter-spacing: 2px;
+    animation: fadeIn 3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Section */
+section {
+    padding: 40px;
+    margin: 40px auto;
+    background: linear-gradient(145deg, #e8f5e9, #c8e6c9);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 1000px;
+    transition: transform 0.6s, box-shadow 0.6s;
+    position: relative;
+    overflow: hidden;
+}
+
+section:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+    transform: rotate(45deg);
+    animation: rotateBg 12s linear infinite;
+}
+
+@keyframes rotateBg {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+h2 {
+    color: #1b5e20;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #66bb6a;
+    padding-bottom: 10px;
+    position: relative;
+    animation: bounceIn 1s ease-out;
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    50% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+h2::before {
+    content: '🌿';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5em;
+    color: #66bb6a;
+    top: -1.2em;
+    animation: pulse 2s infinite alternate;
+}
+
+@keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.2); }
+}
+
+/* Lists */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    background: linear-gradient(45deg, #a5d6a7, #81c784);
+    color: #1b5e20;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    border-left: 10px solid #388e3c;
+    transition: transform 0.4s, box-shadow 0.4s;
+    position: relative;
+    overflow: hidden;
+}
+
+ul li::before {
+    content: '🍃';
+    font-size: 1.5em;
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    transform: translateY(-50%);
+}
+
+ul li:hover {
+    transform: translateX(10px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background-color: #388e3c;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 1.5em;
+    border-top: 8px solid #1b5e20;
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3);
+    animation: footerGlow 4s ease-in-out infinite alternate;
+}
+
+@keyframes footerGlow {
+    0% { text-shadow: 0 0 10px #00E5FF, 0 0 20px #1DE9B6, 0 0 30px #00E676; }
+    100% { text-shadow: 0 0 30px #00E5FF, 0 0 50px #1DE9B6, 0 0 80px #00E676; }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    section {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>EcoValle</h1>
+        <p>Promoviendo Iniciativas Ecológicas y Sostenibles en Valledupar</p>
+    </header>
+
+    <!-- Introducción -->
+    <section id="intro">
+        <h2>Introducción</h2>
+        <p><strong>EcoValle</strong> es un sitio web dedicado a promover iniciativas ecológicas y sostenibles en la ciudad de Valledupar, Colombia. Su enfoque es reducir la contaminación y fomentar la participación comunitaria en proyectos de reciclaje, reutilización y concientización ambiental. Los ciudadanos pueden acceder a información sobre prácticas ambientales responsables y participar activamente en la construcción de un futuro más verde para la región.</p>
+    </section>
+
+    
+
+    <!-- Propósito Principal -->
+    <section id="purpose">
+        <h2>¿Cuál es el propósito principal?</h2>
+        <p>El propósito principal de <strong>EcoValle</strong> es reducir la contaminación en Valledupar mediante la educación ambiental y la implementación de prácticas sostenibles. Sirve como centro de información y motivación para la participación comunitaria en la mejora del manejo de residuos.</p>
+    </section>
+
+    <!-- Métodos para Conocer el Sitio -->
+    <section id="know-us">
+        <h2>¿Cómo puede la gente conocerte?</h2>
+        <ul>
+            <li><strong>Redes Sociales</strong>: Instagram, Facebook, y Twitter.</li>
+            <li><strong>Colaboraciones con Instituciones Educativas</strong>: Talleres y charlas en escuelas.</li>
+            <li><strong>Eventos Comunitarios</strong>: Ferias ambientales y jornadas de limpieza.</li>
+            <li><strong>Publicidad Local</strong>: Carteles y spots radiales.</li>
+        </ul>
+    </section>
+
+    <!-- Ejemplo de Caso de Contaminación -->
+    <section id="case-study">
+        <h2>Ejemplo de caso de contaminación en Valledupar</h2>
+        <p>Uno de los principales problemas es la acumulación de residuos plásticos en el río Guatapurí. <strong>EcoValle</strong> puede ayudar:</p>
+        <ul>
+            <li><strong>Promoviendo el reciclaje</strong> con campañas de recolección de plásticos.</li>
+            <li><strong>Educando sobre reutilización</strong> en talleres para transformar residuos en productos útiles.</li>
+            <li><strong>Concienciando</strong> sobre la reducción del uso de plásticos.</li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 EcoValle. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
